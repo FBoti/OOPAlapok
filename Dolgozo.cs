@@ -2,20 +2,15 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace OOP_Alapok
+namespace OOPAlapok
 {
-    public class Dolgozo : Szemely
+    internal class Dolgozo : Szemely
     {
-        public decimal Ber { get; set; }
+        public int Ber {  get; set; }
 
-        public Dolgozo(string nev, int eletkor, decimal ber) : base(nev, eletkor)
+        public void Kiir()
         {
-            Ber = ber;
-        }
-
-        public override void Bemutatkozas()
-        {
-            Console.WriteLine($"Jó napot! {nev} vagyok, munkavállaló. Havi fizetésem: {Ber:N0} Ft.");
+            Console.WriteLine($"Én egy dolgozó vagyok: {Nev}, {Ber} Ft bérrel.");
         }
     }
 }

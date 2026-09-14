@@ -1,50 +1,37 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
+using System.Text;
 
-namespace OOP_Alapok
+namespace OOPAlapok
 {
-    public class Szemely
+    internal class Szemely
     {
-        protected string nev;
-        private int eletkor;
+        protected string Nev;
+        public int Eletkor;
 
-        public string Nev
+        /*public override string ToString()
         {
-            get => nev;
-            set => nev = value;
-        }
+            return $"{Nev} + {Eletkor}";
+        }*/
 
-        public int Kor
+        public string Name
         {
-            get => eletkor;
-            set
-            {
-                if (value >= 0)
-                {
-                    eletkor = value;
-                }
-                else
-                {
-                    Console.WriteLine($"[Hiba] Hahó, {nev}! Az életkor nem lehet negatív szám ({value}). A módosítás elutasítva.");
-                }
-            }
+            get { return Nev; }
+            set { Nev = value; }
         }
-
-        public Szemely(string nev, int eletkor)
+        /*public int Age
         {
-            this.nev = nev;
-            this.Kor = eletkor;
+            get { return Eletkor; }
+            set { Eletkor = value; }
         }
-
-        public virtual void Bemutatkozas()
+        /*public Szemely(string nev, int kor)
         {
-            Console.WriteLine($"Szia! A nevem {nev}, és {eletkor} éves vagyok.");
+            Nev = nev;
+            Eletkor = kor;
         }
-
-        public override string ToString()
+        public void Kiir()
         {
-            return $"{nev} ({eletkor} éves)";
-        }
+            Console.WriteLine($"{Nev} + {Eletkor}");
+        }*/
     }
 }
